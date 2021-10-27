@@ -1,0 +1,2 @@
+class AdocaosController < ApplicationController
+end

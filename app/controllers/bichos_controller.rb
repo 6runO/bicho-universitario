@@ -1,0 +1,2 @@
+class BichosController < ApplicationController
+end
