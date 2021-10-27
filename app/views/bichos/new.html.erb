@@ -1,0 +1,13 @@
+<h1>Cadastre um animal para adoção</h1>
+
+<div class="container">
+
+    <%= simple_form_for @bicho do |f| %>
+      <%= f.input :apelido%>
+      <%= f.input :cor %>
+      <%= f.input :porte, as: :select, collection: Bicho::PORTE %>
+      <%= f.input :sexo, as: :radio_buttons, collection: Bicho::SEXO %>
+      <%= f.button :submit, class: 'btn-primary' %>
+    <% end %>
+
+</div>
