@@ -5,6 +5,7 @@ class BichosController < ApplicationController
 
   def create
     @bicho = Bicho.new(bicho_params)
+    @bicho.user = current_user
     if @bicho.save
       redirect_to bicho_path(@bicho)
     else
