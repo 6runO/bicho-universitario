@@ -3,6 +3,10 @@ class BichosController < ApplicationController
     @bicho = Bicho.new
   end
 
+  def show
+    @bicho = Bicho.find(params[:id])
+  end
+
   def create
     @bicho = Bicho.new(bicho_params)
     @bicho.user = current_user
