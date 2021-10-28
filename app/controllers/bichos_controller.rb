@@ -21,6 +21,12 @@ class BichosController < ApplicationController
     end
   end
 
+  def destroy
+    @bicho = Bicho.find(params[:id])
+    @bicho.destroy
+    redirect_to bichos_path
+  end
+
   private
 
   def bicho_params
