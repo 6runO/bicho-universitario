@@ -1,15 +1,19 @@
-<h1>Cadastre um animal para adoção</h1>
-
 <div class="container">
-
-    <%= simple_form_for @bicho do |f| %>
-      <%= f.input :apelido %>
-      <%= f.input :cor %>
-      <%= f.input :porte, collection: Bicho::PORTE %>
-      <%= f.input :localizacao %>
-      <%= f.input :sexo, as: :radio_buttons, collection: Bicho::SEXO %>
-      <%= f.input :especie, as: :radio_buttons, collection: Bicho::ESPECIE %>
-      <%= f.button :submit, class: 'btn-primary' %>
-    <% end %>
-
-</div>
+  <h1 class="m-4 text-center text-align">Cadastre um animal para adoção</h1>
+   <div class="row justify-content-center align-items-center">
+      <%= simple_form_for @bicho do |f| %>
+        <div class="form-inputs">
+          <div class="row justify-content-center mx-3">
+            <div class="form-inputs">
+              <%= f.input :apelido %>
+              <%= f.input :cor %>
+              <%= f.input :porte, collection: Bicho::PORTE %>
+              <%= f.input :localizacao %>
+              <%= f.input :sexo, as: :radio_buttons, collection: Bicho::SEXO %>
+              <%= f.input :especie, as: :radio_buttons, collection: Bicho::ESPECIE %>
+              <%= f.button :submit, class: 'btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
