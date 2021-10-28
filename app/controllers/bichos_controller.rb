@@ -1,4 +1,8 @@
 class BichosController < ApplicationController
+  def index
+    @bichos = Bicho.all
+  end
+
   def new
     @bicho = Bicho.new
   end

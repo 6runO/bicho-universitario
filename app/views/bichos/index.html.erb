@@ -1,0 +1,30 @@
+<%= render "shared/banner" %>
+
+<div class="container mt-4">
+
+  <h2 class="text-center">Graduandos</h2>
+
+  <p class="text-center">Total: <%= @bichos.count %></p>
+
+  <div class="container">
+    <div class="row">
+    <%# <div class="col-sm-6 col-lg-4 mb-4 d-flex align-items-stretch">
+      <%= render "form" %>
+    <%# </div> %>
+      <% @bichos.each do |bicho| %>
+        <div class="col-sm-6 col-lg-4 mb-4 d-flex align-items-stretch">
+          <%= link_to bicho_path(bicho) do %>
+            <%= render "shared/card" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <hr>
+  <a href="#">Go up</a>
+  <%# <%= link_to "Back to list", root_path %>
+  <br>
+  <br>
+
+</div>
