@@ -2,9 +2,13 @@
 
 <div class="container mt-4">
 
+  <div class="text-right">
+    <%= link_to "Bicho novo", new_bicho_path, class: "btn btn-primary" %>
+  </div>
+
   <h2 class="text-center">Graduandos</h2>
 
-  <p class="text-center">Total: <%= @bichos.count %></p>
+  <p class="text-center mb-5">Total: <%= @bichos.count %></p>
 
   <div class="container">
     <div class="row">
@@ -14,7 +18,7 @@
       <% @bichos.each do |bicho| %>
         <div class="col-sm-6 col-lg-4 mb-4 d-flex align-items-stretch">
           <%= link_to bicho_path(bicho) do %>
-            <%= render "shared/card" %>
+            <%= render "shared/card", bicho: bicho %>
           <% end %>
         </div>
       <% end %>
