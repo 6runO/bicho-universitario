@@ -5,4 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  validates :nome, :vinculo, :ife, presence: true
+  validates :vinculo, inclusion: { in: %w(servidor discente visitante) }
 end
