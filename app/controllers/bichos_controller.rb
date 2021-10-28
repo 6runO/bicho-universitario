@@ -3,6 +3,10 @@ class BichosController < ApplicationController
     @bicho = Bicho.new
   end
 
+  def show
+    @bicho = Bicho.find(params[:id])
+  end
+
   def create
     @bicho = Bicho.new(bicho_params)
     @bicho.user = current_user
@@ -16,6 +20,6 @@ class BichosController < ApplicationController
   private
 
   def bicho_params
-    params.require(:bicho).permit(:apelido, :cor, :porte, :sexo)
+    params.require(:bicho).permit(:apelido, :cor, :porte, :sexo, :localizacao, :especie)
   end
 end
