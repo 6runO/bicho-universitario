@@ -4,7 +4,10 @@
 <h2>Sexo: <%= @bicho.sexo %></h2>
 <h2>Porte: <%= @bicho.porte %></h2>
 <h2>Cor: <%= @bicho.cor %></h2>
+<h2>Instituição: <%= @bicho.user.ife %></h2>
 <h2>Localização: <%= @bicho.localizacao %></h2>
 
-<%= link_to 'Criar um novo bicho', new_bicho_path, class: 'btn-primary' %>
-<%= link_to 'Excluir este bicho', root_path, method: :delete, class: 'btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer excluir este bicho?' } %>
+<%= link_to 'Cadastrar um novo bicho', new_bicho_path, class: 'btn btn-primary' %>
+<%= link_to 'Descadastrar este bicho', root_path, method: :delete, class: 'btn btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer descadastrar este bicho?' } %>
+<%= link_to 'Atualizar este bicho', root_path, class: 'btn btn-warning' %>
+<%= link_to 'ADOTAR', root_path, class: 'btn btn-success' %>
