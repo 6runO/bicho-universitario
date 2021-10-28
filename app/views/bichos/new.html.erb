@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-5">
   <h1 class="m-4 text-center text-align">Cadastre um animal para adoção</h1>
    <div class="row justify-content-center align-items-center">
       <%= simple_form_for @bicho do |f| %>
@@ -11,7 +11,7 @@
               <%= f.input :localizacao %>
               <%= f.input :sexo, as: :radio_buttons, collection: Bicho::SEXO %>
               <%= f.input :especie, as: :radio_buttons, collection: Bicho::ESPECIE %>
-              <%= f.button :submit, class: 'btn-primary' %>
+              <%= f.button :submit, "Cadastrar bicho", class: 'btn-primary' %>
             </div>
           </div>
         </div>
