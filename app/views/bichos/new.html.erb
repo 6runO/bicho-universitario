@@ -6,7 +6,9 @@
       <%= f.input :apelido %>
       <%= f.input :cor %>
       <%= f.input :porte, collection: Bicho::PORTE %>
+      <%= f.input :localizacao %>
       <%= f.input :sexo, as: :radio_buttons, collection: Bicho::SEXO %>
+      <%= f.input :especie, as: :radio_buttons, collection: Bicho::ESPECIE %>
       <%= f.button :submit, class: 'btn-primary' %>
     <% end %>
 

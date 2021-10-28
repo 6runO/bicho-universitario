@@ -1,5 +1,10 @@
 
 <h2>Apelido: <%= @bicho.apelido %></h2>
+<h2>Espécie: <%= @bicho.especie %></h2>
 <h2>Sexo: <%= @bicho.sexo %></h2>
 <h2>Porte: <%= @bicho.porte %></h2>
 <h2>Cor: <%= @bicho.cor %></h2>
+<h2>Localização: <%= @bicho.localizacao %></h2>
+
+<%= link_to 'Criar um novo bicho', new_bicho_path, class: 'btn-primary' %>
+<%= link_to 'Excluir este bicho', root_path, method: :delete, class: 'btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer excluir este bicho?' } %>
