@@ -1,10 +1,24 @@
-
-<h2>Apelido: <%= @bicho.apelido %></h2>
-<h2>Espécie: <%= @bicho.especie %></h2>
-<h2>Sexo: <%= @bicho.sexo %></h2>
-<h2>Porte: <%= @bicho.porte %></h2>
-<h2>Cor: <%= @bicho.cor %></h2>
-<h2>Localização: <%= @bicho.localizacao %></h2>
-
-<%= link_to 'Criar um novo bicho', new_bicho_path, class: 'btn-primary' %>
-<%= link_to 'Excluir este bicho', root_path, method: :delete, class: 'btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer excluir este bicho?' } %>
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    </div>
+      <div class="form-inputs">
+        <div class="row justify-content-center mx-3">
+          <div class="col-12 col-sm-7 col-md-6">
+            <h2>Apelido: <%= @bicho.apelido %></h2>
+            <h2>Espécie: <%= @bicho.especie %></h2>
+            <h2>Sexo: <%= @bicho.sexo %></h2>
+          </div>
+          <div class="col-12 col-sm-7 col-md-6">
+            <h2>Porte: <%= @bicho.porte %></h2>
+            <h2>Cor: <%= @bicho.cor %></h2>
+            <h2>Localização: <%= @bicho.localizacao %></h2>
+          </div>
+          <div class="form-actions col-sm-12 col-lg-6 text-center">
+            <%= link_to 'Criar um novo bicho', new_bicho_path, class: 'btn-primary' %>
+            <%= link_to 'Excluir este bicho', root_path, method: :delete, class: 'btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer excluir este bicho?' } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
