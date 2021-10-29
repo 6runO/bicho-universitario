@@ -2,7 +2,7 @@ class Bicho < ApplicationRecord
   SEXO = ['Fêmea', 'Macho']
   PORTE = ['Pequeno', 'Médio', 'Grande']
   ESPECIE = ['Cachorro', 'Gato']
-  
+
   belongs_to :user
   has_one :adocao
 

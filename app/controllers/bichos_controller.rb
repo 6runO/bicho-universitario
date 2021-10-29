@@ -41,6 +41,6 @@ class BichosController < ApplicationController
   end
 
   def bicho_params
-    params.require(:bicho).permit(:apelido, :cor, :porte, :sexo, :localizacao, :especie)
+    params.require(:bicho).permit(:apelido, :cor, :porte, :sexo, :localizacao, :especie, :personalidade)
   end
 end
