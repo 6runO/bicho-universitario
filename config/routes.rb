@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'bichos#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :bichos do
-    resources :adocaos, only: [:create, :new]
+    resources :adocaos, only: [:create]
   end
   resources :adocaos, only: [:show]
 end
