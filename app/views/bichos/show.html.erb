@@ -1,13 +1,29 @@
 
-<h2>Apelido: <%= @bicho.apelido %></h2>
-<h2>Espécie: <%= @bicho.especie %></h2>
-<h2>Sexo: <%= @bicho.sexo %></h2>
-<h2>Porte: <%= @bicho.porte %></h2>
-<h2>Cor: <%= @bicho.cor %></h2>
-<h2>Instituição: <%= @bicho.user.ife %></h2>
-<h2>Localização: <%= @bicho.localizacao %></h2>
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    </div>
+      <div class="form-inputs">
+        <div class="row justify-content-center mx-3">
+          <div class="col-12 col-sm-7 col-md-6">
+            <h2>Apelido: <%= @bicho.apelido %></h2>
+            <h2>Espécie: <%= @bicho.especie %></h2>
+            <h2>Sexo: <%= @bicho.sexo %></h2>
+            <h2>Porte: <%= @bicho.porte %></h2>
+          </div>
+          <div class="col-12 col-sm-7 col-md-6">
+           <h2>Cor: <%= @bicho.cor %></h2>
+          <h2>Instituição: <%= @bicho.user.ife %></h2>
+          <h2>Localização: <%= @bicho.localizacao %></h2>
+          </div>
+          <div class="form-actions col-sm-12 col-lg-6 text-center">
+            <%= link_to 'Cadastrar um novo bicho', new_bicho_path, class: 'btn btn-primary' %>
+            <%= link_to 'Descadastrar este bicho', bicho_path(@bicho), method: :delete, class: 'btn btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer descadastrar este bicho?' } %>
+            <%= link_to 'Atualizar este bicho', edit_bicho_path, class: 'btn btn-warning' %>
+            <%= link_to 'ADOTAR', adocaos_path, class: 'btn btn-success' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Cadastrar um novo bicho', new_bicho_path, class: 'btn btn-primary' %>
-<%= link_to 'Descadastrar este bicho', bicho_path(@bicho), method: :delete, class: 'btn btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer descadastrar este bicho?' } %>
-<%= link_to 'Atualizar este bicho', edit_bicho_path, class: 'btn btn-warning' %>
-<%= link_to 'ADOTAR', adocaos_path, class: 'btn btn-success' %>
