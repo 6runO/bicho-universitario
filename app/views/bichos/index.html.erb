@@ -1,0 +1,34 @@
+<%= render "shared/banner" %>
+
+<div class="container mt-4">
+
+  <div class="text-right">
+    <%= link_to "bicho novo na área!", new_bicho_path, class: "btn btn-primary" %>
+  </div>
+
+  <h2 class="text-center">Graduandos</h2>
+
+  <p class="text-center mb-5">Total: <%= @bichos.count %></p>
+
+  <div class="container">
+    <div class="row">
+    <%# <div class="col-sm-6 col-lg-4 mb-4 d-flex align-items-stretch">
+      <%= render "form" %>
+    <%# </div> %>
+      <% @bichos.each do |bicho| %>
+        <div class="col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch justify-content-center">
+          <%= link_to bicho_path(bicho), class:"link-bicho" do %>
+            <%= render "shared/card", bicho: bicho %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <hr>
+  <a href="#">Go up</a>
+  <%# <%= link_to "Back to list", root_path %>
+  <br>
+  <br>
+
+</div>

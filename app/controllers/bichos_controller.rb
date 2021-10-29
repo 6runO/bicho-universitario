@@ -1,4 +1,8 @@
 class BichosController < ApplicationController
+  def index
+    @bichos = Bicho.all
+  end
+
   def new
     @bicho = Bicho.new
   end
@@ -15,6 +19,12 @@ class BichosController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @bicho = Bicho.find(params[:id])
+    @bicho.destroy
+    redirect_to bichos_path
   end
 
   private
