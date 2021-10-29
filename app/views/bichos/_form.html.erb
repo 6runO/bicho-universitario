@@ -11,6 +11,7 @@
               <%= f.input :localizacao, label: 'Localização', placeholder: 'Local da Instituição em que o bicho costuma ficar' %>
               <%= f.input :sexo, as: :radio_buttons, collection: Bicho::SEXO %>
               <%= f.input :especie, label: 'Espécie', as: :radio_buttons, collection: Bicho::ESPECIE %>
+              <%= f.input :photo, label: 'Foto', as: :file %>
               <%= f.button :submit, class: 'btn-primary mb-3' %>
             </div>
           </div>
