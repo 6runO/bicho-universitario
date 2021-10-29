@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row justify-content-center align-items-center">
     </div>
@@ -17,11 +18,12 @@
           <div class="form-actions col-sm-12 col-lg-6 text-center">
             <%= link_to 'Cadastrar um novo bicho', new_bicho_path, class: 'btn btn-primary' %>
             <%= link_to 'Descadastrar este bicho', bicho_path(@bicho), method: :delete, class: 'btn btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer descadastrar este bicho?' } %>
-            <%= link_to 'Atualizar este bicho', root_path, class: 'btn btn-warning' %>
-            <%= link_to 'ADOTAR', root_path, class: 'btn btn-success' %>
+            <%= link_to 'Atualizar este bicho', edit_bicho_path, class: 'btn btn-warning' %>
+            <%= link_to 'ADOTAR', adocaos_path, class: 'btn btn-success' %>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
