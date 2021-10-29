@@ -1,4 +1,5 @@
 class BichosController < ApplicationController
+  before_action :set_bicho, only: [:show, :destroy, :update, :edit]
   def index
     @bichos = Bicho.all
   end
@@ -8,7 +9,6 @@ class BichosController < ApplicationController
   end
 
   def show
-    @bicho = Bicho.find(params[:id])
   end
 
   def create
@@ -22,12 +22,23 @@ class BichosController < ApplicationController
   end
 
   def destroy
-    @bicho = Bicho.find(params[:id])
     @bicho.destroy
     redirect_to bichos_path
   end
 
+  def edit
+  end
+
+  def update
+    @bicho.update(bicho_params)
+    redirect_to bicho_path(@bicho)
+  end
+
   private
+
+  def set_bicho
+    @bicho = Bicho.find(params[:id])
+  end
 
   def bicho_params
     params.require(:bicho).permit(:apelido, :cor, :porte, :sexo, :localizacao, :especie)
