@@ -3,7 +3,7 @@
 <div class="container mt-4">
 
   <div class="text-right">
-    <%= link_to "Bicho novo", new_bicho_path, class: "btn btn-primary" %>
+    <%= link_to "bicho novo na área!", new_bicho_path, class: "btn btn-primary" %>
   </div>
 
   <h2 class="text-center">Graduandos</h2>
@@ -16,8 +16,8 @@
       <%= render "form" %>
     <%# </div> %>
       <% @bichos.each do |bicho| %>
-        <div class="col-sm-6 col-lg-4 mb-4 d-flex align-items-stretch">
-          <%= link_to bicho_path(bicho) do %>
+        <div class="col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch justify-content-center">
+          <%= link_to bicho_path(bicho), class:"link-bicho" do %>
             <%= render "shared/card", bicho: bicho %>
           <% end %>
         </div>
