@@ -5,6 +5,7 @@ class Bicho < ApplicationRecord
 
   belongs_to :user
   has_one :adocao
+  has_one_attached :photo
 
   validates :apelido, :sexo, :cor, :porte, :especie, :localizacao, presence: true
   validates :sexo, inclusion: { in: SEXO }
