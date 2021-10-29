@@ -1,21 +1,24 @@
-<div class="card-bicho">
+<div class="card-bicho flex-grow-1">
   <%= image_tag "french-bulldog" %>
   <div class="card-bicho-infos">
     <div>
-      <div class="d-flex justify-content-between align-items-center mb-1">
-        <h2><%= bicho.apelido.capitalize %></h2>
-        <div class="d-flex align-items-end">
-          <i class="fas fa-dog pet-small"></i>
-          <i class="fas fa-dog pet-medium"></i>
-          <i class="fas fa-dog pet-large pet-active"></i>
+      <h2><%= bicho.apelido.capitalize %></h2>
+
+      <p class="mt-2 mb-3"><i class="fas fa-quote-left"></i> Muitíssimo fofo!</p>
+
+      <div class="d-flex justify-content-between align-items-center mt-2">
+        <div class="d-flex">
+          <div class="d-flex align-items-end">
+            <i class="fas fa-dog pet-small"></i>
+            <i class="fas fa-dog pet-medium"></i>
+            <i class="fas fa-dog pet-large pet-active"></i>
+          </div>
+          <%# <i class="fas fa-cat"></i> %>
         </div>
-        <%# <i class="fas fa-cat"></i> %>
-      </div>
-
-      <p class="mt-2"><i class="fas fa-quote-left"></i> Muitíssimo fofo!</p>
-
-      <div class="d-flex justify-content-end mt-2">
-        <i class="fas fa-graduation-cap"></i> <h2 class="card-bicho-pricing">UFMG</h2>
+        <div class="d-flex">
+          <i class="fas fa-graduation-cap"></i>
+          <h2 class="card-bicho-pricing">UFMG</h2>
+        </div>
       </div>
       <%# <h2 class="card-bicho-pricing"><%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?'}%>
     </div>

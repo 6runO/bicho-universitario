@@ -1,7 +1,22 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Bicho Universitário</h1>
-    <p>Em busca de um bicho inteligente, que realmente te compreenda?</p>
-    <%= link_to "Sign up", new_user_registration_path, class:"btn btn-success" %>
+<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);"> %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/iZyZyrerMrE;">
+  <div class="d-flex justify-content-center">
+    <div id="logo" class="d-flex align-items-start flex-column mr-4">
+      <div class="position-relative"><i class="fas fa-graduation-cap "></i>
+        <div id="logo-dog" class="m-0 position-absolute"><i class="fas fa-dog"></i></div>
+      </div>
+    </div>
+
+    <div id="logo2" class="d-flex align-items-start flex-column mr-4">
+      <div class="position-relative"><i class="fas fa-graduation-cap "></i>
+        <div id="logo-dog2" class="m-0 position-absolute"><i class="fas fa-dog"></i></div>
+      </div>
+    </div>
+
+    <div>
+      <h1>Bicho Universitário</h1>
+      <p class="pb-2">Em busca de um bicho inteligente, que realmente te compreenda?</p>
+      <%= link_to "Cadastrar-se", new_user_registration_path, class:"btn btn-success" %>
+    </div>
   </div>
 </div>
