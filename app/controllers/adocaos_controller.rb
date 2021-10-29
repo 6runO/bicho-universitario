@@ -1,14 +1,26 @@
 class AdocaosController < ApplicationController
-  def create
-    @adocao = Adocao.new(adocao_params)
+  def new
+    @adocao = Adocao.new
     @bicho = Bicho.find(params[:bicho_id])
+  end
+
+  def show
+    @adocao = Adocao.find(params[:id])
+  end
+
+  def create
+    @bicho = Bicho.find(params[:bicho_id])
+    @adocao = Adocao.new
+    @adocao.user = current_user
     @adocao.bicho = @bicho
-    @adocao.save
+    if @adocao.save
+      redirect_to adocao_path(@adocao)
+    end
   end
 
-  private
+#   private
 
-  def adocao_params
-    params.require(:adocao).permit(:bicho_id, :user_id)
-  end
+#   def adocao_params
+#     params.require(:adocao).permit(:bicho_id, :user_id)
+#   end
 end
