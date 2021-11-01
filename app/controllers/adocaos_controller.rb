@@ -1,4 +1,8 @@
 class AdocaosController < ApplicationController
+  def index
+    @adocaos = Adocao.all
+  end
+  
   def new
     @adocao = Adocao.new
     @bicho = Bicho.find(params[:bicho_id])
@@ -15,6 +19,8 @@ class AdocaosController < ApplicationController
     @adocao.user = current_user
     @adocao.bicho = @bicho
     if @adocao.save
+      @bicho.localizacao = 'adotado'
+      @bicho.update
       redirect_to adocao_path(@adocao)
     end
   end
