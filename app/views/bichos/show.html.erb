@@ -21,7 +21,7 @@
             <%= link_to 'Cadastrar um novo bicho', new_bicho_path, class: 'btn btn-primary' %>
             <%= link_to 'Descadastrar este bicho', bicho_path(@bicho), method: :delete, class: 'btn btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer descadastrar este bicho?' } %>
             <%= link_to 'Atualizar este bicho', edit_bicho_path, class: 'btn btn-warning' %>
-            <%= link_to 'ADOTAR', new_bicho_adocao_path(@bicho), class: 'btn btn-success', data: { confirm: 'Só falta confirmar, clicando em OK, pra ser pai/mãe de um bicho universitário!' }%>
+            <%= link_to 'ADOTAR', new_bicho_adocao_path(@bicho), class: 'btn btn-success' %>
           </div>
         </div>
       </div>
