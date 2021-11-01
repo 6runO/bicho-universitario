@@ -1,6 +1,5 @@
 class AdocaosController < ApplicationController
   def index
-    @bicho = Bicho.all
     @adocaos = Adocao.all
   end
 
@@ -20,8 +19,6 @@ class AdocaosController < ApplicationController
     @adocao.user = current_user
     @adocao.bicho = @bicho
     if @adocao.save
-      @bicho.localizacao = 'adotado'
-      @bicho.update
       redirect_to adocao_path(@adocao)
     end
   end

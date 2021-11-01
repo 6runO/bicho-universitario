@@ -1,4 +1,23 @@
 <h1 class="m-4 text-center text-align">Atualizar cadastro do bicho</h1>
-
-<%= render partial: 'form' %>
-
+<div class="container">
+  <% if @bicho.adocao.present? %>
+    <p>O usuário <%= @bicho.adocao.user_id %> requisitou a adoção do <%= @bicho.apelido %>.
+    Entre em contato com ele pelo fone xxx ou pelo email xxx@xxx, para confirmar os detalhes da adoção.
+    Quando a adoção for efetivamente realizada, atualize a informação a seguir: </p>
+    <div class="container mb-5">
+   <div class="row justify-content-center align-items-center">
+      <%= simple_form_for @bicho do |f| %>
+        <div class="form-inputs">
+          <div class="row justify-content-center mx-3">
+            <div class="form-inputs">
+              <%= f.input :apelido, label: 'Bicho Adotado?', as: :radio_buttons, collection: ['Sim', 'Não'] %>
+              <%= f.button :submit, class: 'btn-primary mb-3' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+  <% else %>
+    <%= render partial: 'form' %>
+  <% end %>
+</div>
