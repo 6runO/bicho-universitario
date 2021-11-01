@@ -1,11 +1,12 @@
 class AdocaosController < ApplicationController
-  # def new
-  #   @adocao = Adocao.new
-  #   @bicho = Bicho.find(params[:bicho_id])
-  # end
+  def new
+    @adocao = Adocao.new
+    @bicho = Bicho.find(params[:bicho_id])
+  end
 
   def show
     @adocao = Adocao.find(params[:id])
+    # @bicho = Bicho.find(params[:bicho_id])
   end
 
   def create
