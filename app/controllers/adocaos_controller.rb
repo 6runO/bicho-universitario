@@ -1,8 +1,9 @@
 class AdocaosController < ApplicationController
   def index
+    @bicho = Bicho.all
     @adocaos = Adocao.all
   end
-  
+
   def new
     @adocao = Adocao.new
     @bicho = Bicho.find(params[:bicho_id])

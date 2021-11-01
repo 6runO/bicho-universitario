@@ -1,8 +1,4 @@
-<h1>Bichos Adotados</h1>
-<ul>
-  <% @adocaos.each do |adocao| %>
-    <li>
-      <%= adocao.bicho_id %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Bichos Adotados</h1>
+  <p>Nós já ajudamos <%= @adocaos.count %> bichinhos a serem adotados nas Universidades Brasileiras!</p>
+</div>
