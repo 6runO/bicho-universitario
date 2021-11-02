@@ -1,8 +1,10 @@
 <div class="container mt-4">
 
-  <div class="text-right">
-    <%= link_to "Bicho novo na área?", new_bicho_path, class: "btn btn-primary" %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="text-right">
+      <%= link_to "Cadastrar bicho", new_bicho_path, class: "btn btn-primary" %>
+    </div>
+  <% end %>
 
   <div class="mb-5">
     <h2 class="text-center m-0">Para Adoção</h2>

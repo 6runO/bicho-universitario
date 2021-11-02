@@ -32,10 +32,39 @@
   font-size: 80px;
   color: #F0F7EE;
 }
-// f7f7ff
+
 .banner #logo #logo-cap {
   top: 40px;
   left: 22px;
+}
+
+// Link Dar uma olhada
+
+#container-ver-bichos {
+  width: 190px;
+  height: 50px;
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid #F0F7EE;
+}
+
+#link-ver-bichos,
+#cat-eyes {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#link-ver-bichos {
+  background-color: #F0F7EE;
+  opacity: 1;
+}
+
+#link-ver-bichos:hover {
+  opacity: 0;
 }
 
 #cat {
@@ -48,9 +77,13 @@
   opacity: 1;
 }
 
-#link-ver-bichos {
-  background-color: #F0F7EE;
-  width: 190px;
-  height: 50px;
-  border-radius: 30px;
+#cat-eyes {
+  background-image: url(https://source.unsplash.com/_AHEpAdR8Xo);
+  background-position: 52% 51%;
+  background-size: 400px auto;
+  opacity: 0;
+}
+
+#cat-eyes:hover {
+  opacity: 1;
 }
