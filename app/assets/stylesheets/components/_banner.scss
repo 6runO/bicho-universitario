@@ -1,12 +1,16 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  height: calc(100vh - 56px);
+}
+
+.banner .container {
+  padding: 7% 5% 5% 15%;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #F0F7EE;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -19,46 +23,34 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.banner #logo {
-  position: relative;
-  top: -27px;
-}
-
 .banner #logo .fa-graduation-cap {
-  font-size: 45px;
-  color: #ff00a1;
+  font-size: 30px;
+  color: #0a0908;
 }
 
-.banner #logo .fa-dog {
-  font-size: 50px;
-  color: #ff00a1;
+.banner #logo .fa-paw {
+  font-size: 80px;
+  color: #F0F7EE;
+}
+// f7f7ff
+.banner #logo #logo-cap {
+  top: 40px;
+  left: 22px;
 }
 
-.banner #logo #logo-dog {
-  top: 38px;
-  right: 14px
+#cat {
+  font-size: 20px;
 }
 
-
-
-
-
-.banner #logo2 {
-  position: relative;
-  top: -25px;
+#p-ver-bichos{
+  font-size: 17px;
+  color: black;
+  opacity: 1;
 }
 
-.banner #logo2 .fa-graduation-cap {
-  font-size: 60px;
-  color: #ff00a1;
-}
-
-.banner #logo2 .fa-dog {
-  font-size: 33px;
-  color: #ff00a1;
-}
-
-.banner #logo2 #logo-dog2 {
-  top: 52px;
-  left: 15px
+#link-ver-bichos {
+  background-color: #F0F7EE;
+  width: 190px;
+  height: 50px;
+  border-radius: 30px;
 }

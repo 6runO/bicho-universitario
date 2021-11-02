@@ -1,5 +1,6 @@
 class BichosController < ApplicationController
   before_action :set_bicho, only: [:show, :destroy, :update, :edit]
+
   def index
     @bichos = Bicho.all
   end
@@ -14,6 +15,8 @@ class BichosController < ApplicationController
   def create
     @bicho = Bicho.new(bicho_params)
     @bicho.user = current_user
+    # raise
+    @bicho.photo == nil if params[:bicho][:photo].nil?
     if @bicho.save
       redirect_to bicho_path(@bicho)
     else
