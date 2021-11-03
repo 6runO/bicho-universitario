@@ -19,6 +19,9 @@ class AdocaosController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
 #   private
 
 #   def adocao_params
