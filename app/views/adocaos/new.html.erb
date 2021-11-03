@@ -3,7 +3,7 @@
 
   <div class="container mb-5">
     <div class="row justify-content-center align-items-center">
-    <p>Parabéns <%= @adocao.user %>, você está prestes a fazer uma grande ação! Para prosseguir com a adoção,
+    <p>Parabéns <%= @adocao.user.nome %>, você está prestes a fazer uma grande ação! Para prosseguir com a adoção,
     clique no botão "Requisitar Adoção" e aguarde um contato do guardião do(a) <%= @bicho.apelido %>. Neste contato, vocês deverão
     combinar os detalhes, como o local e a data para o acolhimento do animal.</p>
         <%= simple_form_for [@bicho, @adocao] do |f| %>
