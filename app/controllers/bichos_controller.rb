@@ -18,7 +18,7 @@ class BichosController < ApplicationController
   def create
     @bicho = Bicho.new(bicho_params)
     @bicho.user = current_user
-    @bicho.photo == nil if params[:bicho][:photo].nil?
+    # @bicho.photo == nil if params[:bicho][:photo].nil?
     authorize @bicho
     if @bicho.save
       redirect_to bicho_path(@bicho), notice: 'O cadastro foi realizado com sucesso.'

@@ -1,17 +1,18 @@
 class AdocaosController < ApplicationController
-
   def index
     @adocao = Adocao.all
-  end
-
-  def new
-    @adocao = Adocao.new
-    @bicho = Bicho.find(params[:bicho_id])
   end
 
   def show
     @adocao = Adocao.find(params[:id])
     # @bicho = Bicho.find(params[:bicho_id])
+    authorize @adocao
+  end
+
+  def new
+    @adocao = Adocao.new
+    @bicho = Bicho.find(params[:bicho_id])
+    authorize @adocao
   end
 
   def create
@@ -19,12 +20,12 @@ class AdocaosController < ApplicationController
     @adocao = Adocao.new
     @adocao.user = current_user
     @adocao.bicho = @bicho
+    authorize @adocao
     if @adocao.save
       redirect_to adocao_path(@adocao)
+    else
+      render :new
     end
-  end
-
-  def destroy
   end
 
 #   private
