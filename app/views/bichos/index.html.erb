@@ -1,8 +1,9 @@
 <div class="container mt-4">
 
   <% if user_signed_in? %>
+  <%# <% if policy(Bicho).new? %>
     <div class="text-right">
-      <%= link_to "Cadastrar bicho", new_bicho_path, class: "btn btn-primary" %>
+      <%= link_to "Cadastrar novo bicho", new_bicho_path, class: "btn btn-primary" %>
     </div>
   <% end %>
 
