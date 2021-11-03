@@ -1,12 +1,16 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  height: calc(100vh - 56px);
+}
+
+.banner .container {
+  padding: 7% 5% 5% 15%;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #F0F7EE;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -19,46 +23,67 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.banner #logo {
-  position: relative;
-  top: -27px;
-}
-
 .banner #logo .fa-graduation-cap {
-  font-size: 45px;
-  color: #ff00a1;
+  font-size: 30px;
+  color: #0a0908;
 }
 
-.banner #logo .fa-dog {
-  font-size: 50px;
-  color: #ff00a1;
+.banner #logo .fa-paw {
+  font-size: 80px;
+  color: #F0F7EE;
 }
 
-.banner #logo #logo-dog {
-  top: 38px;
-  right: 14px
+.banner #logo #logo-cap {
+  top: 40px;
+  left: 22px;
 }
 
+// Link Dar uma olhada
 
-
-
-
-.banner #logo2 {
+#container-ver-bichos {
+  width: 190px;
+  height: 50px;
   position: relative;
-  top: -25px;
+  border-radius: 30px;
+  border: 1px solid #F0F7EE;
 }
 
-.banner #logo2 .fa-graduation-cap {
-  font-size: 60px;
-  color: #ff00a1;
+#link-ver-bichos,
+#cat-eyes {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.banner #logo2 .fa-dog {
-  font-size: 33px;
-  color: #ff00a1;
+#link-ver-bichos {
+  background-color: #F0F7EE;
+  opacity: 1;
 }
 
-.banner #logo2 #logo-dog2 {
-  top: 52px;
-  left: 15px
+#link-ver-bichos:hover {
+  opacity: 0;
+}
+
+#cat {
+  font-size: 20px;
+}
+
+#p-ver-bichos{
+  font-size: 17px;
+  color: black;
+  opacity: 1;
+}
+
+#cat-eyes {
+  background-image: url(https://source.unsplash.com/_AHEpAdR8Xo);
+  background-position: 52% 51%;
+  background-size: 400px auto;
+  opacity: 0;
+}
+
+#cat-eyes:hover {
+  opacity: 1;
 }

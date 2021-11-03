@@ -10,18 +10,30 @@
             <h2>Sexo: <%= @bicho.sexo %></h2>
             <h2>Porte: <%= @bicho.porte %></h2>
             <h2>Personalidade: <%= @bicho.personalidade %></h2>
-            <%= cl_image_tag @bicho.photo.key, height: 300, width: 400, crop: :fill %>
+            <%# <%= cl_image_tag @bicho.photo.key, height: 300, width: 400, crop: :fill %>
+            <%# acima, talvez seja melho colocar "crop: :cover" %>
           </div>
           <div class="col-12 col-sm-7 col-md-6">
-           <h2>Cor: <%= @bicho.cor %></h2>
-          <h2>Instituição: <%= @bicho.user.ife %></h2>
-          <h2>Localização: <%= @bicho.localizacao %></h2>
+            <h2>Cor: <%= @bicho.cor %></h2>
+            <h2>Instituição: <%= @bicho.user.ife %></h2>
+            <h2>Localização: <%= @bicho.localizacao %></h2>
           </div>
           <div class="form-actions col-sm-12 col-lg-6 text-center">
-            <%= link_to 'Cadastrar um novo bicho', new_bicho_path, class: 'btn btn-primary' %>
-            <%= link_to 'Descadastrar este bicho', bicho_path(@bicho), method: :delete, class: 'btn btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer descadastrar este bicho?' } %>
-            <%= link_to 'Atualizar este bicho', edit_bicho_path, class: 'btn btn-warning' %>
-            <%= link_to 'ADOTAR', new_bicho_adocao_path(@bicho), class: 'btn btn-success' %>
+            <% if policy(@bicho).destroy? %>
+              <%= link_to 'Cadastrar novo bicho', new_bicho_path, class: 'btn btn-primary' %>
+            <% end %>
+
+            <% if policy(@bicho).destroy? %>
+              <%= link_to 'Descadastrar este bicho', bicho_path(@bicho), method: :delete, class: 'btn btn-danger btn-cancel', data: { confirm: 'Você tem certeza que quer descadastrar este bicho?' } %>
+            <% end %>
+
+            <% if policy(@bicho).edit? %>
+              <%= link_to 'Atualizar este bicho', edit_bicho_path, class: 'btn btn-warning' %>
+            <% end %>
+
+            <% if user_signed_in? && !policy(@bicho).destroy? %>
+              <%= link_to 'ADOTAR', new_bicho_adocao_path(@bicho), class: 'btn btn-success' %>
+            <% end %>
           </div>
         </div>
       </div>

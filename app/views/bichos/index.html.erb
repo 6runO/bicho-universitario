@@ -1,14 +1,16 @@
-<%= render "shared/banner" %>
-
 <div class="container mt-4">
 
-  <div class="text-right">
-    <%= link_to "bicho novo na área!", new_bicho_path, class: "btn btn-primary" %>
+  <% if user_signed_in? %>
+  <%# <% if policy(Bicho).new? %>
+    <div class="text-right">
+      <%= link_to "Cadastrar novo bicho", new_bicho_path, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <div class="mb-5">
+    <h2 class="text-center m-0">Para Adoção</h2>
+    <p class="text-center m-0 pl-3">Total: <%= @bichos.count %></p>
   </div>
-
-  <h2 class="text-center">Graduandos</h2>
-
-  <p class="text-center mb-5">Total: <%= @bichos.count %></p>
 
   <div class="container">
     <div class="row">
