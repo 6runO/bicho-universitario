@@ -10,7 +10,7 @@
             <h2>Sexo: <%= @bicho.sexo %></h2>
             <h2>Porte: <%= @bicho.porte %></h2>
             <h2>Personalidade: <%= @bicho.personalidade %></h2>
-            <%# <%= cl_image_tag @bicho.photo.key, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag @bicho.photo.key, height: 300, width: 400, crop: :cover %>
             <%# acima, talvez seja melho colocar "crop: :cover" %>
           </div>
           <div class="col-12 col-sm-7 col-md-6">
