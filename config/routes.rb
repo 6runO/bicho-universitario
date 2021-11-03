@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :bichos do
     resources :adocaos, only: [:create, :new]
   end
-  resources :adocaos, only: [:show]
+  resources :adocaos, only: [:show, :destroy]
 end
