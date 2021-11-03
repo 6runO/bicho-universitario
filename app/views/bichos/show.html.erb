@@ -32,7 +32,7 @@
             <% end %>
 
             <% if user_signed_in? && !policy(@bicho).destroy? %>
-              <%= link_to 'Adotar', bicho_adocaos_path(@bicho), method: :post, class: 'btn btn-success', data: { confirm: 'Só falta confirmar, clicando em OK, pra ser pai/mãe de um bicho universitário!' }%>
+              <%= link_to 'ADOTAR', new_bicho_adocao_path(@bicho), class: 'btn btn-success' %>
             <% end %>
           </div>
         </div>
