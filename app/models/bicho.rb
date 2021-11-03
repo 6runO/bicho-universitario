@@ -7,7 +7,7 @@ class Bicho < ApplicationRecord
   has_one :adocao, dependent: :destroy
   has_one_attached :photo
 
-  validates :apelido, :sexo, :cor, :porte, :especie, :localizacao, presence: true
+  validates :apelido, :sexo, :cor, :porte, :especie, :localizacao, :photo, presence: true
   validates :sexo, inclusion: { in: SEXO }
   validates :porte, inclusion: { in: PORTE }
   validates :especie, inclusion: { in: ESPECIE }
