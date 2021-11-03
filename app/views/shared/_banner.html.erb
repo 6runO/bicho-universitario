@@ -7,14 +7,19 @@
     <div>
       <h1>Bicho Universitário</h1>
       <p class="pb-2">Em busca de um bicho inteligente, que realmente te compreenda?</p>
-      <%= link_to "Cadastrar-se", new_user_registration_path, class:"btn btn-success" %>
+      <% if !user_signed_in? %>
+        <%= link_to "Cadastrar-se", new_user_registration_path, class:"btn btn-success" %>
+      <% end %>
     </div>
   </div>
 
   <%= link_to bichos_path, class:"link-bicho" do %>
-    <div id="link-ver-bichos" class="d-flex align-items-center justify-content-center mx-auto">
-      <div id="cat"><i class="fas fa-cat"></i></div>
-      <p id="p-ver-bichos" class="m-0 pl-2">Dar uma olhada</p>
+    <div id="container-ver-bichos" class="mx-auto">
+      <div id="link-ver-bichos" class="d-flex align-items-center justify-content-center mx-auto">
+        <div id="cat"><i class="fas fa-cat"></i></div>
+        <p id="p-ver-bichos" class="m-0 pl-2">Dar uma olhada</p>
+      </div>
+      <div id="cat-eyes"></div>
     </div>
   <% end %>
 </div>

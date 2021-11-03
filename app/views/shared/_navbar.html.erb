@@ -13,7 +13,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item mx-2">
-          <%= link_to "Home", bichos_path, class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item mx-2">
+          <%= link_to "Bichos", bichos_path, class: "nav-link" %>
         </li>
         <li class="nav-item mx-2">
           <%= link_to "Novo bicho", new_bicho_path, class: "nav-link" %>
@@ -30,7 +33,7 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item login">
+        <li class="nav-item login mr-5">
           <div class="rounded" style="background-color:black;">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </div>

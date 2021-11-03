@@ -1,8 +1,11 @@
 <div class="container mt-4">
 
-  <div class="text-right">
-    <%= link_to "Bicho novo na área?", new_bicho_path, class: "btn btn-primary" %>
-  </div>
+  <% if user_signed_in? %>
+  <%# <% if policy(Bicho).new? %>
+    <div class="text-right">
+      <%= link_to "Cadastrar novo bicho", new_bicho_path, class: "btn btn-primary" %>
+    </div>
+  <% end %>
 
   <div class="mb-5">
     <h2 class="text-center m-0">Para Adoção</h2>
@@ -16,8 +19,10 @@
     <%# </div> %>
       <% @bichos.each do |bicho| %>
         <div class="col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch justify-content-center">
-          <%= link_to bicho_path(bicho), class:"link-bicho" do %>
-            <%= render "shared/card", bicho: bicho %>
+          <% unless bicho.adocao.present? %>
+            <%= link_to bicho_path(bicho), class:"link-bicho" do %>
+              <%= render "shared/card", bicho: bicho %>
+            <% end %>
           <% end %>
         </div>
       <% end %>
