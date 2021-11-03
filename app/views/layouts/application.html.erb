@@ -13,11 +13,20 @@
 
   <body>
     <div id="page-container">
-      <div id="content-wrap">
+      <% if current_page?(root_path) %>
+      <% else %>
+        <div id="content-wrap">
+      <% end %>
+
         <%= render 'shared/navbar' %>
         <%= yield %>
         <%= render 'shared/flashes' %>
-      </div>
+
+      <% if current_page?(root_path) %>
+      <% else %>
+        </div>
+      <% end %>
+
       <% unless current_page?(root_path) %>
         <%= render 'shared/footer' %>
       <% end %>
