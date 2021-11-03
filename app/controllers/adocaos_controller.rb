@@ -1,4 +1,9 @@
 class AdocaosController < ApplicationController
+
+  def index
+    @adocao = Adocao.all
+  end
+
   def new
     @adocao = Adocao.new
     @bicho = Bicho.find(params[:bicho_id])
