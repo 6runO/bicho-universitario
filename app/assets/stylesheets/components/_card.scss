@@ -3,6 +3,20 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
+  flex-basis: 0;
+  flex-grow: 1;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.size-ife-line {
+  position: absolute;
+  bottom: 13px;
+  width: calc(100% - 32px);
+}
+
+.card-bicho:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 .card-bicho > img {
@@ -24,7 +38,7 @@
 }
 
 .card-bicho .card-bicho-infos {
-  padding: 16px;
+  padding: 12px 16px 16px 16px;
   // display: flex;
   // justify-content: space-between;
   // align-items: flex-end;
@@ -36,8 +50,4 @@
   right: 16px;
   top: -20px;
   width: 40px;
-}
-
-.card-delete {
-  bottom: 0
 }

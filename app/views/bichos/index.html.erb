@@ -12,26 +12,18 @@
     <p class="text-center m-0 pl-3">Total: <%= @bichos.count - Adocao.count %></p>
   </div>
 
-  <div class="container">
-    <div class="row">
-    <%# <div class="col-sm-6 col-lg-4 mb-4 d-flex align-items-stretch">
-      <%= render "form" %>
-    <%# </div> %>
-      <% @bichos.each do |bicho| %>
-        <div class="col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch justify-content-center">
-          <% unless bicho.adocao.present? %>
-            <%= link_to bicho_path(bicho), class:"link-bicho" do %>
-              <%= render "shared/card", bicho: bicho %>
-            <% end %>
-          <% end %>
+  <div class="row">
+    <% @bichos.each do |bicho| %>
+      <% unless bicho.adocao.present? %>
+        <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch justify-content-center">
+            <%= render "shared/card", bicho: bicho %>
         </div>
       <% end %>
-    </div>
+    <% end %>
   </div>
 
   <hr>
-  <a href="#">Go up</a>
-  <%# <%= link_to "Back to list", root_path %>
+  <a href="#">Voltar ao topo</a>
   <br>
   <br>
 
