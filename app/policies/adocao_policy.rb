@@ -20,6 +20,6 @@ class AdocaoPolicy < ApplicationPolicy
   private
 
   def is_owner?
-    record.user = user
+    record.user == user
   end
 end
