@@ -8,6 +8,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :nome, :vinculo, :ife, presence: true
+  validates :nome, :vinculo, :universidade_id, presence: true
   validates :vinculo, inclusion: { in: %w(servidor discente visitante) }
 end

@@ -26,8 +26,8 @@
               <%= f.input :nome,
                           required: true,
                           input_html: { autocomplete: "nome" } %>
-              <%= f.input :ife,
-                          label: "Instituição de Ensino",
+              <%= f.association :universidade,
+                          label: "Universidade",
                           required: true,
                           input_html: { autocomplete: "ife" } %>
               <%= f.input :vinculo,
